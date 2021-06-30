@@ -60,3 +60,86 @@
 ### machine learning and python
 * statistical models can be done via scikit-learn
 * for deep learning models, mxnet, tensorflow, pytorch
+
+## evaluate model
+* https://scikit-learn.org/stable/modules/model_evaluation.html
+### metrics
+* recall
+* precision
+* log loss - measure of how likely model thinks the predictions are correct. Model thinks that there 5% probability of buyer to buy shirt.
+* mean absolute error
+* hinge loss
+* r^2
+* quantile loss
+* f1 score
+* kl divergence
+* accuracy - fraction of predictions a model gets rigth
+
+### methods to evaluate regression model
+* Mean absolute error (MAE): This is measured by taking the average of the absolute difference between the actual values and the predictions. Ideally, this difference is minimal.
+* Root mean square error (RMSE): This is similar MAE, but takes a slightly modified approach so values with large error receive a higher penalty. RMSE takes the square root of the average squared difference between the prediction and the actual value.
+* Coefficient of determination or R-squared (R^2): This measures how well-observed outcomes are actually predicted by the model, based on the proportion of total variation of outcomes.
+
+## model inference
+* even after this step you can change algos, data, requirements
+
+# examples 
+* supervised - predict prices
+* unsupervised - isolate micro-genres of books
+* neural network - raw images analysis, try to found chemical spills
+* https://machinelearningmastery.com/ridge-regression-with-python/
+
+### unsupervised evaluation metrics:
+* V - measure
+* Silhouette coefficient - how well the data was clusterred
+* Rand index
+* Mutual information
+* Contingency matrix
+* Completeness
+* Homogenity
+* Fowlkes-Mallows
+* Calinski-Harabasz index
+* Pair confusion matrix
+* Davies-Boulding index
+
+### unsupervised learning - terminology
+* bag of words - is a technique to extract features from the text. counts how many times a word appears in the doc.
+* data vectorization - transform of non-numeric data into a numerical format so that it can be used by the machine
+* silhouette coefficient - a score from -1 to 1 that describes the clusters found during modelling. 0 - overlapping clusters, less then zero - points are assigned to wrong clusters, more then zero - success
+* stop words - a list of words removed during building datasat, like 'a', 'the'
+
+### reading on unsupervised
+* https://machinelearningmastery.co/
+* https://machinelearningmastery.com/deep-learning-bag-of-words-model-sentiment-analysis/
+
+### readings on deep learning/neural networks
+* https://aws.amazon.com/blogs/machine-learning/protecting-people-through-virtual-boundaries-computer-vision/
+
+## intro into ml glossary
+* Discrete: A term taken from statistics referring to an outcome taking on only a finite number of values (such as days of the week).
+* Machine learning, or ML, is a modern software development technique that enables computers to solve problems by using examples of real-world data. 
+  
+
+# machine learning in aws
+### aws services pretrained
+* health ai(amazon prescribed medical, speech to text)
+* industrial ai(monitron, failure of machines prediction)
+* anomaly detection(lookout for metrics)
+* chatbot(amazon lex)
+* personalization(amazon personalize, recomendation system)
+* forecasting(amazon forecast)
+* fraud(amazon fraud detector)
+* code development(codeguru & devops guru)\
+* vision(amazon recognition)
+* speech(amazon polly)
+* text(amazon textract)
+* contact centers(amazon lens, analyze users speech with contact center)
+* search(amazon kendra, search in unstructured data)
+
+### other products
+* amazon sagemaker studio - build train and deploy ml models
+* amazon sagemaker distributed training - partitions model and training data for faster learning
+* amazon sagemake clarify - detects bias across the ML workflow and explaining model behaviour
+
+### readings on aws ml services
+* https://aws.amazon.com/machine-learning/ai-services/?utm_source=Udacity&utm_medium=Webpage&utm_campaign=Udacity%20AWS%20ML%20Foundations%20Course
