@@ -143,3 +143,10 @@
 
 ### readings on aws ml services
 * https://aws.amazon.com/machine-learning/ai-services/?utm_source=Udacity&utm_medium=Webpage&utm_campaign=Udacity%20AWS%20ML%20Foundations%20Course
+
+# Reinforcement learning 
+* Agent: The piece of software you are training is called an agent. It makes decisions in an environment to reach a goal.
+* Environment: The environment is the surrounding area with which the agent interacts.
+* Reward: Feedback is given to an agent for each action it takes in a given state. This feedback is a numerical reward.
+* Action: For every state, an agent needs to take an action toward achieving its goal.
+
