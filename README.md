@@ -149,4 +149,26 @@
 * Environment: The environment is the surrounding area with which the agent interacts.
 * Reward: Feedback is given to an agent for each action it takes in a given state. This feedback is a numerical reward.
 * Action: For every state, an agent needs to take an action toward achieving its goal.
+* Action space: The set of all valid actions or choices, available to an agent as it interacts with the environment.
+* Hyperparameteres: Are variables that control the performance of your agent during training. E.g. learning rate. 
+* The reward function's purpose is to encourage the agent to reach its goal. 
+* reward graph: plot of rewards from each episode
+* 
+### strategies of reinforcement learning in aws deep racer
+* soft actor critic(encourage exploration), data-efficient, in aws deep racer works only in discrete action spaces
+* proximal policy optimization(very stable), data hungry, in aws deep racer works in discrete and continuous action spaces
 
+### reward graph(aws deepracer)
+* Average reward. This graph represents the average reward the agent earns during a training iteration. The average is calculated by averaging the reward earned across all episodes in the training iteration. 
+* Average percentage completion (training). The training graph represents the average percentage of the track completed by the agent in all training episodes in the current training. It shows the performance of the vehicle while experience is being gathered.
+* Average percentage completion (evaluation).  While the model is being updated, the performance of the existing model is evaluated. The evaluation graph line is the average percentage of the track completed by the agent in all episodes run during the evaluation period.
+* Best model line. This line allows you to see which of your model iterations had the highest average progress during the evaluation. The checkpoint for this iteration will be stored. A checkpoint is a snapshot of a model that is captured after each training (policy-updating) iteration.
+* Reward primary y-axis. This shows the reward earned during a training iteration. To read the exact value of a reward, hover your mouse over the data point on the graph.
+* Percentage track completion secondary y-axis. This shows you the percentage of the track the agent completed during a training iteration.
+* Iteration x-axis. This shows the number of iterations completed during your training job.
+
+### Adjust Hyperparameteres
+* A lower learning rate makes learning take longer but can help increase the quality of your model.
+
+
+# Generative AI
