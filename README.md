@@ -170,5 +170,27 @@
 ### Adjust Hyperparameteres
 * A lower learning rate makes learning take longer but can help increase the quality of your model.
 
-
 # Generative AI
+* are mostly unsupervised models
+* non generative techniquue: discriminative(cat vs dog, aka cat-dog detector)
+* generative technique: creates new data from the training data set(create new image of cat)
+* A generative model aims to answer the question,"Have I seen data like this before?"
+### types of generative ai models:
+* generative adversarial networks(GANs) : uses two neural networks(generator network produces new data, discriminator measures similarity) to generate new content
+* Autoregressive models(AR-CNN): used to stydy systems that evolve over the time, aka prediction.
+* Transformer-based models :  used to study data that is sequentional in nature(pixels in picture, words in text).
+### AWS DeepComposer
+* it uses generative ai techniques
+* It consists of a USB keyboard that connects to your computer to input melody and the AWS DeepComposer console, which includes AWS DeepComposer Music studio to generate music, learning capsules to dive deep into generative AI models
+### GANs(in scope of DeepComposer)
+* A GAN is a type of generative machine learning model which pits two neural networks against each other to generate new content: a generator and a discriminator.
+* A generator is a neural network that learns to create new data resembling the source data on which it was trained.
+* A discriminator is another neural network trained to differentiate between real and synthetic data. Critiques how realistic the data is.
+* The generator and the discriminator are trained in alternating cycles. The generator learns to produce more and more realistic data while the discriminator iteratively gets better at learning to differentiate real data from the newly created data.
+* The generator takes in a batch of melody as the input and generates a a music as the output by adding accompaniments to each of the input music tracks.
+* The discriminator then takes these generated music tracks and predicts how far they deviate from the real data present in the training dataset. This deviation is called the generator loss. This feedback from the discriminator is used by the generator to incrementally get better at creating realistic output.
+* As the generator gets better at creating music accompaniments, it begins fooling the discriminator. So, the discriminator needs to be retrained as well. The discriminator measures the discriminator loss to evaluate how well it is differentiating between real and fake data.
+
+ ### AR-CNN(in scope of DeepComposer)
+* Piano roll: A two-dimensional piano roll matrix that represents input tracks. Time is on the horizontal axis and pitch is on the vertical axis.
+* Edit event: When a note is either added or removed from your input track during inference.
