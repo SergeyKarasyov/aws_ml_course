@@ -194,3 +194,43 @@
  ### AR-CNN(in scope of DeepComposer)
 * Piano roll: A two-dimensional piano roll matrix that represents input tracks. Time is on the horizontal axis and pitch is on the vertical axis.
 * Edit event: When a note is either added or removed from your input track during inference.
+### Glossary from lesson 3
+ *   Action: For every state, an agent needs to take an action toward achieving its goal.
+ *   Agent: The piece of software you are training is called an agent. It makes decisions in an environment to reach a goal.
+ *   Discriminator: A neural network trained to differentiate between real and synthetic data.
+ *   Discriminator loss: Evaluates how well the discriminator differentiates between real and fake data.
+ *   Edit event: When a note is either added or removed from your input track during inference.
+ *   Environment: The environment is the surrounding area within which the agent interacts.
+ *   Exploration versus exploitation: An agent should exploit known information from previous experiences to achieve higher cumulative rewards, but it also needs to explore to gain new experiences that can be used in choosing the best actions in the future.
+ *  Generator: A neural network that learns to create new data resembling the source data on which it was trained.
+ *   Generator loss: Measures how far the output data deviates from the real data present in the training dataset.
+ *   Hidden layer: A layer that occurs between the output and input layers. Hidden layers are tailored to a specific task.
+ *   Input layer: The first layer in a neural network. This layer receives all data that passes through the neural network.
+ *   Output layer: The last layer in a neural network. This layer is where the predictions are generated based on the information captured in the hidden layers.
+ *   Piano roll: A two-dimensional piano roll matrix that represents input tracks. Time is on the horizontal axis and pitch is on the vertical axis.
+ *   Reward: Feedback is given to an agent for each action it takes in a given state. This feedback is a numerical reward.
+
+# Software engineering practices
+## Clean and Modular Code
+* Production code: Software running on production servers to handle live users and data of the intended audience.
+* Production-quality code, which describes code that meets expectations for production in reliability, efficiency, and other aspects. Ideally, all code in production meets these expectations, but this is not always the case.
+* Clean code: Code that is readable, simple, and concise. Clean production-quality code is crucial for collaboration and maintainability in software development.
+* Modular code: Code that is logically broken up into functions and modules. Modular production-quality code that makes your code more organized, efficient, and reusable.
+* Module: A file. Modules allow code to be reused by encapsulating them into files that can be imported into other files.
+
+## Refactoring code
+
+*  Refactoring: Restructuring your code to improve its internal structure without changing its external functionality. This gives you a chance to clean and modularize your program after you've got it working.
+*  Since it isn't easy to write your best code while you're still trying to just get it working, allocating time to do this is essential to producing high-quality code. Despite the initial time and effort required, this really pays off by speeding up your development time in the long run.
+*  You become a much stronger programmer when you're constantly looking to improve your code. The more you refactor, the easier it will be to structure and write good code the first time.
+
+## Writing clean code: Meaningful names
+* Be descriptive and imply type: For booleans, you can prefix with is_ or has_ to make it clear it is a condition. You can also use parts of speech to imply types, like using verbs for functions and nouns for variables.
+* Be consistent but clearly differentiate: age_list and age is easier to differentiate than ages and age.
+* Avoid abbreviations and single letters: You can determine when to make these exceptions based on the audience for your code. If you work with other data scientists, certain variables may be common knowledge. While if you work with full stack engineers, it might be necessary to provide more descriptive names in these cases as well. (Exceptions include counters and common math variables.)
+* Long names aren't the same as descriptive names: You should be descriptive, but only with relevant information. For example, good function names describe what they do well without including details about implementation or highly specific uses. 
+
+## Writing clean code: Nice whitespace
+* Organize your code with consistent indentation: the standard is to use four spaces for each indent. You can make this a default in your text editor.
+* Separate sections with blank lines to keep your code well organized and readable.
+* Try to limit your lines to around 79 characters, which is the guideline given in the PEP 8 style guide. In many good text editors, there is a setting to display a subtle line that indicates where the 79 character limit is. 
