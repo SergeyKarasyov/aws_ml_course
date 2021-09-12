@@ -299,3 +299,56 @@
 *    Attribute: A descriptor or characteristic. Examples would be color, length, size, etc. These attributes can take on specific values like blue, 3 inches, large, etc.
 *    Method: An action that a class or object could take.
 *    Encapsulation: One of the fundamental ideas behind object-oriented programming is called encapsulation: you can combine functions and data all into a single entity. In object-oriented programming, this single entity is called a class. Encapsulation allows you to hide implementation details, much like how the scikit-learn package hides the implementation of machine learning algorithms.
+
+
+#  Python package
+*  A package is a collection of Python modules. 
+*  a Python package also needs an __init__.py file
+
+# Python environments
+* A virtual environment is a silo-ed Python installation apart from your main Python installation. That way you can install packages and delete the virtual environment without affecting your main Python installation
+* there are two popular Python environment managers: conda and venv. You can create virtual environments with either one.
+
+### Conda 
+* Conda does two things: manages packages and manages environments. 
+* As a package manager, conda makes it easy to install Python packages, especially for data science. For instance, typing conda install numpy installs the numpy package. 
+* As an environment manager, conda allows you to create silo-ed Python installations. With an environment manager, you can install packages on your computer without affecting your main Python installation.
+```
+conda create --name environmentname
+source activate environmentname
+conda install numpy
+```
+* pip can only manage Python packages, whereas conda is a language agnostic package manager. In fact, conda was invented because pip could not handle data science packages that depended on libraries outside of Python. 
+* conda manages environments and packages. pip only manages packages.
+* Whether you choose to create environments with venv or conda will depend on your use case. conda is very helpful for data science projects, but conda can make generic Python software development a bit more confusing; that's the case for this project.
+
+### PIP and VENV
+ * To use venv and pip, the commands look something like the following:
+ ```
+python3 -m venv environmentname
+source environmentname/bin/activate
+pip install numpy
+```
+
+
+### Putting code on PyPi
+* Note that pypi.org and test.pypy.org are two different websites. You'll need to register separately at each website. If you only register at pypi.org, you will not be able to upload to the test.pypy.org repository.
+```
+cd binomial_package_files
+python setup.py sdist
+pip install twine
+
+# commands to upload to the pypi test repository
+twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+pip install --index-url https://test.pypi.org/simple/ dsnd-probability
+
+# command to upload to the pypi repository
+twine upload dist/*
+pip install dsnd-probability
+```
+* another way to distribute package
+```
+python3 setup.py sdist bdist_wheel
+```
+This command still outputs a folder called dist. The difference is that you will get both a .tar.gz file and a .whl file. The .tar.gz file is called a source archive, whereas the .whl file is a built distribution. The .whl file is a newer type of installation file for Python packages. When you pip install a package, pip firsts look for a .whl file (wheel file); if there isn't one, it looks for the .tar.gz file. 
+A .tar.gz file (an sdist) contains the files needed to compile and install a Python package. A .whl file (a built distribution) only needs to be copied to the proper place for installation. Behind the scenes, pipinstalling a .whl file has fewer steps than installing a .tar.gz file.
