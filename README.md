@@ -234,3 +234,18 @@
 * Organize your code with consistent indentation: the standard is to use four spaces for each indent. You can make this a default in your text editor.
 * Separate sections with blank lines to keep your code well organized and readable.
 * Try to limit your lines to around 79 characters, which is the guideline given in the PEP 8 style guide. In many good text editors, there is a setting to display a subtle line that indicates where the 79 character limit is. 
+
+
+#Documentation
+### Inline comments
+*    Inline comments are text following hash symbols throughout your code. They are used to explain parts of your code, and really help future contributors understand your work.
+*    Comments often document the major steps of complex code. Readers may not have to understand the code to follow what it does if the comments explain it. However, others would argue that this is using comments to justify bad code, and that if code requires comments to follow, it is a sign refactoring is needed.
+*    Comments are valuable for explaining where code cannot. For example, the history behind why a certain method was implemented a specific way. Sometimes an unconventional or seemingly arbitrary approach may be applied because of some obscure external variable causing side effects. These things are difficult to explain with code.
+
+### Docstrings
+* Docstring, or documentation strings, are valuable pieces of documentation that explain the functionality of any function or module in your code. Ideally, each of your functions should always have a docstring. 
+* Docstrings are surrounded by triple quotes. The first line of the docstring is a brief explanation of the function's purpose. 
+* The next element of a docstring is an explanation of the function's arguments. Here, you list the arguments, state their purpose, and state what types the arguments should be. Finally, it is common to provide some description of the output of the function. Every piece of the docstring is optional; however, doc strings are a part of good coding practice. 
+
+### Project Documentation
+* Project documentation is essential for getting others to understand why and how your code is relevant to them, whether they are potentials users of your project or developers who may contribute to your code. A great first step in project documentation is your README file. It will often be the first interaction most users will have with your project. 
