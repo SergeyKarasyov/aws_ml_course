@@ -249,3 +249,47 @@
 
 ### Project Documentation
 * Project documentation is essential for getting others to understand why and how your code is relevant to them, whether they are potentials users of your project or developers who may contribute to your code. A great first step in project documentation is your README file. It will often be the first interaction most users will have with your project. 
+
+## Testing and data science
+* Problems that could occur in data science aren’t always easily detectable; you might have values being encoded incorrectly, features being used inappropriately, or unexpected data breaking assumptions.
+* To catch these errors, you have to check for the quality and accuracy of your analysis in addition to the quality of your code. Proper testing is necessary to avoid unexpected surprises and have confidence in your results.
+* Test-driven development (TDD): A development process in which you write tests for tasks before you even write the code to implement those tasks.
+* Unit test: A type of test that covers a “unit” 
+
+## Code review
+### Is the code clean and modular?
+*    Can I understand the code easily?
+*    Does it use meaningful names and whitespace?
+*    Is there duplicated code?
+*    Can I provide another layer of abstraction?
+*    Is each function and module necessary?
+*    Is each function or module too long?
+
+### Is the code efficient?
+
+*    Are there loops or other steps I can vectorize?
+*    Can I use better data structures to optimize any steps?
+*    Can I shorten the number of calculations needed for any steps?
+*    Can I use generators or multiprocessing to optimize any steps?
+
+### Is the documentation effective?
+
+*    Are inline comments concise and meaningful?
+*    Is there complex code that's missing documentation?
+*    Do functions use effective docstrings?
+*    Is the necessary project documentation provided?
+
+### Is the code well tested?
+
+*    Does the code high test coverage?
+*    Do tests check for interesting cases?
+*    Are the tests readable?
+*    Can the tests be made more efficient?
+
+### Is the logging effective?
+
+*    Are log messages clear, concise, and professional?
+*    Do they include all relevant and useful information?
+*    Do they use the appropriate logging level?
+
+
